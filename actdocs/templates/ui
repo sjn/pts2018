@@ -18,19 +18,22 @@
 
     <!-- CSS Stylesheets -->
     <!-- <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'style.css') %]" /> -->
-    <link rel="stylesheet" type="text/css" href="/css/act-base.css" />
-    <link rel="stylesheet" type="text/css" href="/css/schedule.css" />
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="/css/act-base.css" /> -->
+    <!--  <link rel="stylesheet" type="text/css" href="/css/schedule.css" /> -->
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.min.css') %]" media="screen, projection" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap-responsive.min.css') %]" media="screen" />
-    <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'qa2014.css') %]" />
+    <!-- <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'qa2014.css') %]" /> -->
 
     <!-- JavaScript sugar -->
-    <script src="[% make_uri_info('js', 'jquery-1.9.0.min.js') %]"></script>
+<!--    <script src="[% make_uri_info('js', 'jquery-1.9.0.min.js') %]"></script>
     <script src="[% make_uri_info('js', 'bootstrap.min.js') %]"></script>
     <script>
         $('.dropdown-toggle').dropdown();
     </script>
-    <script src="/js/act.js"></script>
+   -->
+   <!-- <script src="/js/act.js"></script> -->
 
     <!-- Favorite icon -->
     <link rel="shortcut icon" type="image/png" href="/favicon.png" />
@@ -41,63 +44,68 @@
 
   </head>
 
-  <body id="Body">
-    <div class="container-fluid">
-      <div class="hero-unit">
-        <a href="/pts2018/" style="text-decoration:none;">
-          <div class="visible-phone">
-            <div class="header-titre">
-              <h1>
-                <img style="max-height:150px;" src="[% make_uri_info('pix', 'onion.png') %]" alt="Logo ognion"/><br />
-                    Perl Toolchain Summit 2018
-              </h1>
-              <p> April 19-22, 2018 in Oslo</p>
-            </div>
-          </div>
+    <body id="Body">
 
-          <div class="visible-tablet">
-            <div class="header-titre">
-              <table width="100%">
-                <tbody>
-                  <tr>
-                    <td>
-                      <img style="max-height:150px;" src="[% make_uri_info('pix', 'onion.png') %]" alt="Logo ognion"/><br />
-                    </td>
-                    <td>
-                      &nbsp;
-                    </td>
-                    <td align="right" style='padding:10px'>
-                      <h1> Perl Toolchain Summit 2018
-                      <h2> April 19-22, 2018<br />in Oslo, Norway</h2>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
+        <div class="container">
+            <a class="navbar-brand" href="/">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle"
+                            data-toggle="dropdown" id="navbarDropdownMenuLink">Your Ideas</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Ideas</a>
+                                <a href="#" class="dropdown-item">Add</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                        <a href="#" class="nav-link">Logout</a>
+                    </li>
 
-          <div class="row-fluid visible-desktop">
-            <div class="header-titre">
-              <table width="100%">
-                <tbody>
-                  <tr>
-                    <td>
-                      <img style="max-height:150px;" src="[% make_uri_info('pix', 'pts-logo-head.png') %]" alt="Logo PTS"/>
-                    </td>
-                    <td>
-                      &nbsp;
-                    </td>
-                    <td align="right" style='padding:10px'>
-                      <h2> April 19-22, 2018<br />in Oslo, Norway</h2>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Register</a>
+                        </li>
+                </ul>
             </div>
-          </div>
-        </a>
+        </div>
+  </nav>
+  <style>
+   .hero-background {
+       background-image: url('[% make_uri_info('assets', 'der_wanderer-500x467.png') %]'),
+                         url('[% make_uri_info('assets', 'bit-fog-pattern-tile.png') %]'),
+                         linear-gradient(#8289E5, #C1D5F0);
+       background-repeat: no-repeat, repeat-x, no-repeat;
+       background-position: 100% 100%, 0% 100%;
+       background-color: #8289E5;
+       color: white;
+       text-shadow:3px 3px #666;
+       min-height: 768px;
+   }
+  </style>
+  <div class="jumbotron jumbotron-fluid hero-background">
+      <div class="container">
+          <h1 class="display-4">Perl Toolchain Summit 2018</h1>
+          <h1 class="display-4">Oslo, Norway - XX.YY.ZZ</h1>
       </div>
+  </div>
 
+    <div class="container-fluid">
       <div class="row-fluid hidden-desktop">
         <div class="span2">
           [% PROCESS menu2 %]
