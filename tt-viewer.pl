@@ -5,10 +5,10 @@ use Data::Dumper;
 use Template;
 plugin 'proxy';
 
-my $root = app->home."/../";
+my $root = app->home;
 
 my $template = Template->new({
-    INCLUDE_PATH => "${root}actdocs/templates/",
+    INCLUDE_PATH => "${root}/actdocs/templates/",
     DEBUG => 1
 }) || die $Template::ERROR;
 
@@ -19,11 +19,11 @@ my %tt_helpers = (
     }
 );
 
-push @{app->static->paths}, "${root}wwwdocs";
+push @{app->static->paths}, "${root}/wwwdocs";
 
 
 
-get '/pts2018' => sub {
+get '/pts2018/' => sub {
     my $self = shift;
     $template->process('ui',
                        \%tt_helpers,
